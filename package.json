@@ -1,0 +1,25 @@
+{
+  "name": "maos",
+  "version": "1.0.0",
+  "description": "MAOS - Multi-Agent Operating System",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run dev:server & bun run dev:web",
+    "dev:server": "bun run --hot src/entrypoints/web.ts",
+    "dev:web": "cd maos-web && bun run dev",
+    "build": "cd maos-web && bun run build",
+    "start": "bun run src/entrypoints/web.ts",
+    "web": "bun run src/entrypoints/web.ts"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "ws": "^8.16.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/ws": "^8.5.10",
+    "@types/uuid": "^9.0.7",
+    "typescript": "^5.3.3"
+  }
+}
